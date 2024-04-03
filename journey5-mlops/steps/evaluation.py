@@ -51,7 +51,7 @@ def evaluation(model, preprocess_step_ret, deploy_step_ret):
     eval_output = eval_algo.evaluate(
         model=js_model_runner,
         dataset_config=config,
-        prompt_template="$feature",
+        prompt_template="$model_input",
         save=True,
     )
     eval_output_all.append(eval_output)
